@@ -1,5 +1,7 @@
 /* ── Reset & Base ── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -57,6 +59,20 @@ body {
 .screen.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* Screens with long content need top alignment so scrolling works */
+#journey,
+#careers {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+#journey .journey-content,
+#careers .careers-content {
+  margin: 0 auto;
 }
 
 /* ── Welcome Screen ── */
@@ -247,6 +263,7 @@ body {
   width: 100%;
   max-width: 720px;
   padding-top: 3rem;
+  padding-bottom: 4rem;
 }
 
 .journey-header {
@@ -388,18 +405,39 @@ body {
 
 /* ── Animations ── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes popIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ── Responsive ── */
@@ -431,7 +469,10 @@ body {
 
 /* ── Accessibility ── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
