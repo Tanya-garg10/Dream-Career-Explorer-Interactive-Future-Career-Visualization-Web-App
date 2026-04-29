@@ -67,6 +67,7 @@
 function showScreen(id) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
+    window.scrollTo(0, 0);
 }
 
 // ── Build Career Cards ──
@@ -147,9 +148,6 @@ function openJourney(career) {
     });
 
     showScreen('journey');
-
-    // Scroll to top of journey content
-    document.getElementById('journey').scrollTop = 0;
 }
 
 // ── Event Listeners ──
