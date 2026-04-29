@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Career Journey</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Particle canvas background -->
+  <canvas id="particles"></canvas>
+
+  <!-- SCREEN 1: Welcome -->
+  <section id="welcome" class="screen active">
+    <div class="welcome-content">
+      <p class="welcome-tag">Your future starts here</p>
+      <h1 class="welcome-title">What Will <span class="gradient-text">You</span> Become?</h1>
+      <p class="welcome-sub">Pick your dream career and watch your journey unfold — milestones, skills, and the story of your future self.</p>
+      <button id="btn-start" class="btn-primary" aria-label="Start exploring careers">
+        Explore Careers
+        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2: Career Selection -->
+  <section id="careers" class="screen">
+    <div class="careers-content">
+      <h2 class="section-title">Choose Your Dream Career</h2>
+      <p class="section-sub">Click a card to begin your journey</p>
+      <div id="career-grid" class="career-grid" role="list"></div>
+    </div>
+  </section>
+
+  <!-- SCREEN 3: Journey Visualization -->
+  <section id="journey" class="screen">
+    <button id="btn-back" class="btn-back" aria-label="Go back to career selection">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16 10H4m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back
+    </button>
+    <div class="journey-content">
+      <div class="journey-header">
+        <span id="journey-icon" class="journey-icon"></span>
+        <h2 id="journey-title" class="journey-title"></h2>
+        <p id="journey-quote" class="journey-quote"></p>
+      </div>
+      <div id="timeline" class="timeline" role="list"></div>
+      <div class="journey-footer">
+        <div id="skills-section" class="skills-section">
+          <h3 class="skills-heading">Key Skills You'll Build</h3>
+          <div id="skills-list" class="skills-list"></div>
+        </div>
+        <button id="btn-restart" class="btn-primary">
+          Try Another Career
+          <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
